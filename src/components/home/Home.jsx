@@ -162,7 +162,13 @@ const Home = () => {
                 )}
 
                 <p className="display-jobs-number">
-                    Showing {filteredJobs.length} of {jobs.length}
+                    {filteredJobs.length === 0 ? (
+                        <span>Loading...</span>
+                    ) : (
+                        <span>
+                            Showing {filteredJobs.length} of {jobs.length}
+                        </span>
+                    )}
                 </p>
 
                 {filteredJobs.map((job) => {
