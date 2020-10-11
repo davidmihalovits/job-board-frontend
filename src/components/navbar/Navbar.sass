@@ -1,0 +1,39 @@
+@import '../../App'
+
+.navbar-container
+    border-bottom: 1px solid #e2e2e2
+
+    .navbar
+        font-family: Roboto
+        display: grid
+        grid-template-columns: 1fr 120px
+        align-items: center
+        margin: 0 auto
+        padding: 8px
+        max-width: 1300px
+
+        .navbar-logo
+            width: 50px
+            height: 50px
+
+        .navbar-link
+            text-decoration: none
+
+            .navbar-button
+                font-weight: bold
+                color: white
+                background-color: $primary
+                font-size: 16px
+                outline: none
+                border: none
+                cursor: pointer
+                padding: 12px 0
+                width: 100%
+
+@media only screen and (min-width: 1024px)
+    .navbar-container
+        position: fixed
+        width: 100%
+        background-color: white
+        z-index: 3
+        top: 0

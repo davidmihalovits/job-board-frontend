@@ -1,0 +1,124 @@
+@import '../../App'
+
+.modal-open
+    overflow: hidden
+
+.home-container
+    margin: 10px auto 0 auto
+    max-width: 1300px
+
+    .home
+        padding: 8px
+
+        .search-filter
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 0 20px
+
+            .home-search
+                outline: none
+                padding: 10px
+                border: 1px solid black
+                font-size: 14px
+                width: 100%
+
+                &:focus
+                    color: $primary
+                    border: 1px solid $primary
+
+            .home-filter
+                border: 1px solid black
+                display: grid
+                align-items: center
+                justify-items: center
+                cursor: pointer
+                width: 100%
+                position: relative
+
+                .filter-button
+                    font-size: 14px
+
+                .filter-arrow
+                    position: absolute
+                    right: 0
+                    margin-right: 6px
+
+            .home-filter-open
+                border: 1px solid $primary
+                display: grid
+                align-items: center
+                justify-items: center
+                cursor: pointer
+                width: 100%
+                position: relative
+
+                .filter-button
+                    font-size: 14px
+                    color: $primary
+
+                .filter-arrow
+                    position: absolute
+                    right: 0
+                    margin-right: 6px
+
+        .filter-open-container
+            margin-top: 10px
+            text-align: center
+            display: grid
+            grid-template-columns: 1fr 1fr
+            gap: 10px 0
+            cursor: pointer
+
+        .display-jobs-number
+            margin-top: 10px
+            font-size: 14px
+            font-weight: 300
+            color: #b1b1b1
+
+        .job-link
+            text-decoration: none
+            color: black
+
+            .job
+                display: grid
+                grid-template-columns: 70px 1fr
+                margin-top: 30px
+                line-height: 20px
+
+                .job-left
+                    .job-logo
+                        width: 60px
+                        height: 60px
+                        object-fit: cover
+
+                .job-right
+                    .job-title
+                        font-weight: bold
+                        font-size: 20px
+
+                    .job-company
+
+                    .job-right-details
+                        display: grid
+                        grid-template-columns: 100px 1fr
+                        grid-template-rows: 1fr 1fr
+                        font-weight: 300
+                        font-size: 14px
+
+                    .job-createdAt
+                        font-size: 14px
+                        font-weight: 300
+                        color: #b1b1b1
+
+@media only screen and (min-width: 1024px)
+    .home-container
+        .home
+            position: fixed
+            z-index: 1
+            top: 0
+            background-color: white
+            width: 400px
+            height: 100%
+            overflow: scroll
+            margin-top: 67px
+            padding-bottom: 100px
