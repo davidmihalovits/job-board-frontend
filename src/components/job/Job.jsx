@@ -111,16 +111,11 @@ const Job = (props) => {
                 resumeUrl: resumeUrl,
                 email: job.email,
             })
-            .then((res) => {
-                if (res.data.status === "Application sent.") {
-                    setLoading(false);
-                    setResumeName("");
-                    setResumeUrl("");
-                    setSuccessMessage(true);
-                } else {
-                    alert("There was an error sending the application.");
-                    setLoading(false);
-                }
+            .then(() => {
+                setLoading(false);
+                setResumeName("");
+                setResumeUrl("");
+                setSuccessMessage(true);
             });
     };
 

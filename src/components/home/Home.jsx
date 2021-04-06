@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Home.sass";
-import axios from "axios";
 import dayjs from "dayjs";
 import arrow from "../../assets/arrow.svg";
 import arrow2 from "../../assets/arrow2.svg";
@@ -18,9 +17,11 @@ const Home = () => {
     const url = useLocation();
 
     const getJobs = () => {
-        axios
-            .get("https://remotedev-server.herokuapp.com/getJobs")
-            .then((res) => setJobs(res.data));
+        fetch("https://remotedev-server.herokuapp.com/getJobs", {
+            method: "GET",
+        })
+            .then((res) => res.json())
+            .then((res) => setJobs(res));
     };
 
     useEffect(() => {
